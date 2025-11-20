@@ -1,151 +1,113 @@
-📘 README – BOT FINANCEIRO (WhatsApp + IA + Google Sheets)
+<div align="center">
 
-<sub>Desenvolvido por João Pedro</sub>
+<h1>🤖 Bot Financeiro para WhatsApp</h1>
 
-<h1 align="center">🤖 Bot Financeiro Inteligente</h1> <p align="center">Automatize seu controle financeiro usando WhatsApp + Inteligência Artificial + Google Sheets</p> <p align="center"> <img src="https://img.shields.io/badge/WhatsApp-Bot-green" /> <img src="https://img.shields.io/badge/Gemini-IA-orange" /> <img src="https://img.shields.io/badge/Google%20Sheets-API-yellow" /> <img src="https://img.shields.io/badge/Node.js-18+-blue" /> <img src="https://img.shields.io/badge/Status-Ativo-success" /> </p>
-<p align="center"> <img src="https://raw.githubusercontent.com/joaopedro/github-images/main/bot-financeiro-preview.png" width="600" /> </p>
+<p>Um assistente financeiro inteligente que registra gastos via WhatsApp usando IA (Gemini), Baileys e Google Sheets.</p>
+
+<img src="https://img.shields.io/badge/Node.js-18+-green?logo=node.js" />
+<img src="https://img.shields.io/badge/Gemini%20API-IA-blue?logo=google" />
+<img src="https://img.shields.io/badge/Baileys-WhatsApp%20API-brightgreen" />
+<img src="https://img.shields.io/badge/Google%20Sheets-Automação-yellow?logo=google-sheets" />
+
+</div>
+
 📌 Sobre o Projeto
 
-O Bot Financeiro é um assistente automatizado que interpreta mensagens enviadas pelo WhatsApp, identifica despesas/receitas usando IA (Google Gemini), classifica categorias automaticamente e registra tudo em uma planilha do Google Sheets, servindo como banco de dados.
+Este bot permite registrar gastos e receitas pelo WhatsApp, usando linguagem natural, como:
 
-Além disso, o bot também gera relatórios prontos sobre sua vida financeira:
+gastei 30 reais em lanche ontem
+recebi 500 reais hoje
+minha esposa gastou 90 no mercado
 
-📊 Resumo mensal
 
-📅 Resumo semanal
+A IA interpreta tudo automaticamente:
 
-💰 Maior gasto do mês
-
-📂 Gastos por categoria
-
-👥 Gastos por pessoa
-
-🔍 Busca de lançamentos
-
-📄 Extrato dos últimos registros
-
-Tudo isso apenas enviando mensagens pelo WhatsApp.
-
-🚀 Funcionalidades
-<details> <summary><strong>📥 Lançamentos Automáticos (IA)</strong></summary>
-
-A IA entende frases como:
-
-"gastei 25 reais em lanche ontem"
-
-"minha esposa gastou 40 no mercado"
-
-"recebi 300 reais hoje"
-
-E transforma tudo em:
+tipo (receita ou despesa)
 
 valor
 
-tipo (despesa/receita)
+data
 
-categoria automática
-
-data correta (interpreta "hoje", "ontem")
-
-descrição
+categoria
 
 responsável
 
-</details> <details> <summary><strong>📊 Relatórios e Consultas</strong></summary>
+descrição
 
-status financeiro
+E grava os dados diretamente em uma planilha do Google Sheets.
 
-total do mês
+🛠 Tecnologias utilizadas
 
-resumo semanal
+Node.js
 
-maior gasto
+Baileys (API não-oficial do WhatsApp)
 
-gastos por categoria
+Gemini API (Google AI)
 
-top categorias
+Google Sheets API
 
-extrato
+Google Cloud Credentials
 
-buscar mercado
+🚀 Instalação
+1️⃣ Clone o repositório
+git clone https://github.com/SEU_USUARIO/wpp-bot-financeiro.git
+cd wpp-bot-financeiro
 
-gastos da esposa
-
-gastos do pai
-
-</details> <details> <summary><strong>📂 Classificação Automática</strong></summary>
-
-O bot reconhece categorias como:
-
-Supermercado
-
-Lanches
-
-Restaurante
-
-Energia
-
-Uber
-
-Farmácia
-
-Academia
-
-Assinaturas
-
-Veículo
-
-Outros
-
-</details>
-🧠 Tecnologias utilizadas
-<table> <tr> <td><strong>WhatsApp</strong></td> <td>Baileys (WhatsApp Web API)</td> </tr> <tr> <td><strong>IA</strong></td> <td>Google Gemini 2.5 Flash</td> </tr> <tr> <td><strong>Banco de dados</strong></td> <td>Google Sheets API</td> </tr> <tr> <td><strong>Backend</strong></td> <td>Node.js (ES Modules)</td> </tr> </table>
-📱 Comandos do Bot
-/menu                → mostra o menu
-maior gasto          → maior gasto do mês
-status financeiro    → resumo mensal
-total do mês         → receitas / despesas / saldo
-resumo semanal       → últimos 7 dias
-gastos por categoria → soma por categoria
-top categorias       → ranking de gastos
-extrato              → últimos lançamentos
-buscar <termo>       → busca na planilha
-gastos da <pessoa>   → gastos por responsável
-
-📦 Instalação
-git clone https://https://github.com/pedrojoao-silva/wpp-bot
-cd bot-financeiro
+2️⃣ Instale dependências
 npm install
 
-🔧 Configuração
-
-Crie um arquivo .env:
-
-GEMINI_API_KEY=SUA_API_KEY
+3️⃣ Crie o arquivo .env
+GEMINI_API_KEY=SUA_CHAVE_AQUI
+GOOGLE_APPLICATION_CREDENTIALS=./bot-financeiro.json
 SHEET_ID=ID_DA_SUA_PLANILHA
 SHEET_TAB_NAME=LANCAMENTOS
-GOOGLE_APPLICATION_CREDENTIALS=service-account.json
 
+4️⃣ Adicione suas credenciais do Google
 
-Baixe também o arquivo de credenciais da conta de serviço do Google Cloud (JSON).
+Baixe o arquivo JSON da Google Cloud e coloque na raiz do projeto.
 
-▶️ Como iniciar o bot
+📱 Como usar
+
+Inicie o bot:
+
 npm start
 
 
-O terminal mostrará o QR Code:
+Escaneie o QR Code que aparecer no terminal.
 
-<p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/QRCode_Example.png" width="200"> </p>
+Agora basta enviar mensagens no WhatsApp, exemplo:
 
-Escaneie com o WhatsApp → pronto! 🎉
+gastei 25 reais em pizza ontem
 
-📚 Estrutura do Projeto
-bot-financeiro/
-│── bot.js
-│── gemini.js
-│── sheets.js
-│── categorias.js
-│── auth_info/        # sessão do WhatsApp
-│── service-account.json
-│── .env
+🧾 Comandos disponíveis
+📊 Financeiro
+status financeiro
+maior gasto
+total do mês
+resumo semanal
+
+🗂 Categorias
+gastos por categoria
+top categorias
+
+👥 Pessoas
+gastos da esposa
+gastos do joão
+gastos do pai
+
+📄 Extrato e buscas
+extrato
+buscar mercado
+
+📋 Menu
+/menu
+
+📦 Estrutura do projeto
+├── bot.js
+├── gemini.js
+├── sheets.js
+├── categorias.js
+├── auth_info/        # Login do WhatsApp
+├── bot-financeiro.json
+├── .env
 └── README.md
