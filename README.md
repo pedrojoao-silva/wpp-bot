@@ -50,18 +50,22 @@ Google Cloud Credentials
 
 🚀 Instalação
 1️⃣ Clone o repositório
+```bash
 git clone https://github.com/SEU_USUARIO/wpp-bot-financeiro.git
 cd wpp-bot-financeiro
+```
 
 2️⃣ Instale dependências
+```bash
 npm install
-
+```
 3️⃣ Crie o arquivo .env
+```bash
 GEMINI_API_KEY=SUA_CHAVE_AQUI
 GOOGLE_APPLICATION_CREDENTIALS=./bot-financeiro.json
 SHEET_ID=ID_DA_SUA_PLANILHA
 SHEET_TAB_NAME=LANCAMENTOS
-
+```
 4️⃣ Adicione suas credenciais do Google
 
 Baixe o arquivo JSON da Google Cloud e coloque na raiz do projeto.
@@ -69,9 +73,9 @@ Baixe o arquivo JSON da Google Cloud e coloque na raiz do projeto.
 📱 Como usar
 
 Inicie o bot:
-
+```bash
 npm start
-
+```
 
 Escaneie o QR Code que aparecer no terminal.
 
@@ -103,11 +107,13 @@ buscar mercado
 /menu
 
 📦 Estrutura do projeto
+```bash
 ├── bot.js
 ├── gemini.js
 ├── sheets.js
 ├── categorias.js
 ├── auth_info/        # Login do WhatsApp
-├── bot-financeiro.json
+├── bot-financeiro.jso
 ├── .env
 └── README.md
+```
