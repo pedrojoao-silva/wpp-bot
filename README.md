@@ -113,7 +113,7 @@ buscar <termo>       → busca na planilha
 gastos da <pessoa>   → gastos por responsável
 
 📦 Instalação
-git clone https://github.com/SEU-USUARIO/bot-financeiro
+git clone https://https://github.com/pedrojoao-silva/wpp-bot
 cd bot-financeiro
 npm install
 
